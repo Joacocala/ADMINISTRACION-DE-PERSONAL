@@ -1,0 +1,108 @@
+{% extends "Base.html" %}
+{%load static%}
+
+{%block header%}     
+
+
+<header class="bg-dark py-5">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center justify-content-center">
+            <div class="col-lg-8 col-xl-7 col-xxl-6">
+                <div class="my-5 text-center text-xl-start">
+                    <h1 class="display-5 fw-bolder text-white mb-2">Plantilla de la regional</h1>
+                    <p class="lead fw-normal text-white-50 mb-4">Listado de los colaboradores</p>
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                        <a class="btn btn-primary btn-lg px-4 me-sm-3" href="{% url 'inicio'%}">Inicio</a>
+                        <a class="btn btn-outline-light btn-lg px-4" href="{% url 'crear_empleado' %}">Agregar nuevo</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="https://2.bp.blogspot.com/-SYGeCtU6jTA/VGJQTlz1v1I/AAAAAAAAF_8/zV-iomb9vlQ/s1600/Logo_Stefanini.png" alt="..." /></div>
+        </div>
+    </div>
+</header>
+
+
+{%endblock%}
+
+
+
+{%block cambia%}
+
+
+<table class="table table-striped table-dark" style="margin-top:10px">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Legajo</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido</th>
+        <th scope="col">Teléfono</th>
+        <th scope="col">Torre de Servicio</th>
+        <th scope="col">email </th>
+        <th scope="col">Fech.ingreso </th>
+        <th scope="col">Fech.Nacimiento </th>
+        <th scope="col">Convenio </th>
+      </tr>
+    </thead>
+    <tbody>
+    
+      <tr>
+        <th scope="row">{{ forloop.counter }}</th>
+        <td>{{ empleado.legajo }}</td>
+        <td>{{ empleado.nombre }}</td>
+        <td>{{ empleado.apellido }}</td>
+        <td>{{ empleado.num_telefono }}</td>
+        <td>{{ empleado.torre_servicio }}</td>
+        <td>{{ empleado.email }}</td>
+        <td>{{ empleado.fecha_ingreso }}</td>
+        <td>{{ empleado.fecha_nacimiento }}</td>
+        <td>{{ empleado.convenio }}</td>
+       
+      </tr>
+     
+    </tbody>
+</table>
+
+<style>
+#searchInput {
+    width: 300px; /* Ajusta el ancho según sea necesario */
+    padding: 10px; /* Aumenta el padding para un mejor espaciado interior */
+    border: 2px solid #ccc; /* Cambia el color del borde */
+    border-radius: 25px; /* Redondea los bordes para un aspecto más moderno */
+    background-color: #f9f9f9; /* Cambia el color de fondo */
+    outline: none; /* Elimina el outline predeterminado del navegador */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave */
+    transition: border-color 0.3s ease; /* Añade una transición suave al pasar el mouse */
+}
+#searchInput:hover {
+    border-color: #0E94F4; /* Cambia el color del borde al pasar el mouse */
+}
+
+#searchInput::placeholder {
+    color: #aaa; /* Cambia el color del placeholder */
+    opacity: 1; /* Hace que el placeholder sea completamente opaco */
+    margin-left: 10px; /* Añade un margen a la izquierda para separarlo del borde */
+}
+.searchButton {
+    margin-left: 10px; /* Añade un margen a la izquierda para separarlo del campo de entrada */
+    padding: 10px 20px; /* Ajusta el padding según sea necesario */
+    background-color: #4CAF50; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 25px; /* Redondea los bordes del botón */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s ease; /* Añade una transición suave al pasar el mouse */
+}
+
+.searchButton:hover {
+    background-color: #45a049; /* Cambia el color de fondo al pasar el mouse */
+}
+
+
+
+</style>
+
+
+{%endblock%}
+

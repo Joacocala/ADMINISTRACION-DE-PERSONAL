@@ -1,0 +1,106 @@
+{% extends "Base.html" %}
+{% load static %}
+
+{%block header%}
+
+<header class="header bg-dark  blue py-5">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center justify-content-center">
+            <div class="col-lg-8 col-xl-7 col-xxl-6">
+                <div class="my-5 text-center text-xl-start">
+                    <h1 class="display-5 fw-bolder text-white mb-2">Agregar nuevo colaborador <br> {{empleado.nombre}} {{empleado.apellido}} </h1>
+                    <p class="lead fw-normal text-white-50 mb-4"></p>
+                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                        <a class="btn btn-primary btn-lg px-4 me-sm-3" href="{% url 'inicio'%}">Inicio</a>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="https://2.bp.blogspot.com/-SYGeCtU6jTA/VGJQTlz1v1I/AAAAAAAAF_8/zV-iomb9vlQ/s1600/Logo_Stefanini.png" alt="..." /></div>
+        </div>
+    </div>
+</header>
+
+{%endblock header%}
+
+{% block cambia %}
+
+
+
+<div class="contenedorFormulario" style="margin-bottom:100px">
+    <form action="" method="POST" class="miFormulario">
+        {% csrf_token %}
+        
+        <table class="tablaFormulario">
+            {{ form.as_table }}
+        </table>
+        
+        <input type="submit" value="Aceptar" class="botonSubmit">
+    </form>
+</div>
+
+<style>
+    /* Reinicia los márgenes y el relleno predeterminados del navegador */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Asegura que el body ocupe toda la altura disponible */
+    width: 100%; /* Asegura que el body ocupe toda el ancho disponible */
+    overflow: auto; /* Evita barras de desplazamiento innecesarias */
+}
+
+/* Ajusta el contenedor del formulario para que ocupe toda la página */
+.contenedorFormulario {
+    height: auto; /* Asegura que el contenedor ocupe toda la altura de la ventana */
+    width: auto; /* Asegura que el contenedor ocupe todo el ancho de la ventana */
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+.tablaFormulario {
+    width: 100%;
+    margin-bottom: 20px; /* Aumenta el margen inferior para un mejor espaciado */
+    border-collapse: collapse; /* Elimina los espacios entre las celdas de la tabla */
+}
+
+.tablaFormulario th,
+.tablaFormulario td {
+    padding: 12px 15px; /* Aumenta el padding para un mejor espaciado */
+    text-align: left; /* Alinea el texto a la izquierda */
+    border: 1px solid #ddd; /* Agrega bordes a las celdas para una mejor definición */
+}
+/* Ajusta el formulario para que se ajuste al contenedor */
+.miFormulario {
+    width: 100%; /* Asegura que el formulario ocupe todo el ancho del contenedor */
+    max-width: 600px; /* Limita el ancho máximo para evitar que el formulario sea demasiado grande en pantallas grandes */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: auto; /* Permite desplazamiento si el contenido excede el alto del formulario */
+}
+
+/* Ajusta el estilo del botón de envío */
+.botonSubmit {
+    display: block;
+    width: 100%; /* Asegura que el botón ocupe todo el ancho del formulario */
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+</style>
+{% endblock cambia %}
+{%block footer%}
+
+{%endblock footer%}
+
+
+
+
+

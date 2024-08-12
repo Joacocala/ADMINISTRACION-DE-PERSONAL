@@ -1,0 +1,14 @@
+{% extends "Base.html" %}
+{%load static%}
+
+{%block cambia%}
+
+<h1> login </h1>
+
+
+<form action="" method="POST">
+{% csrf_token %}
+  {{form.as_table}}
+<button type="submit" value="aceptar"></button>
+</form>
+{%endblock%}
