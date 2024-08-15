@@ -1,162 +1,97 @@
-{% extends "Base.html" %}
+{%extends "Base.html"%}
 {%load static%}
 
-{%block header%}     
 
 
-<header class="bg-dark py-5">
+{%block header%}
+
+<header class="bg-dark py-5" >
     <div class="container px-5">
         <div class="row gx-5 align-items-center justify-content-center">
             <div class="col-lg-8 col-xl-7 col-xxl-6">
                 <div class="my-5 text-center text-xl-start">
-                    <h1 class="display-5 fw-bolder text-white mb-2">REGIONAL SUR </h1>
+                    <h1 class="display-3 fw-bolder text-white mb-2">Administracion de personal </h1>
                     <p class="lead fw-normal text-white-50 mb-4"></p>
-                    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-                       
-                    </div>
+                   
                 </div>
             </div>
-            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="https://2.bp.blogspot.com/-SYGeCtU6jTA/VGJQTlz1v1I/AAAAAAAAF_8/zV-iomb9vlQ/s1600/Logo_Stefanini.png" alt="..." /></div>
+            <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="https://www.contactcenterworld.com/images/company/Stefanini-1200px-logo.png" alt="..." /></div>
         </div>
     </div>
 </header>
-
-
 {%endblock%}
 
-{%block cambia%}
 
+{%block cambia%}
 <section class="py-5">
     <div class="container px-5 my-5">
         <div class="row gx-5 justify-content-center">
             <div class="col-lg-8 col-xl-6">
                 <div class="text-center">
-                    <h2 class="fw-bolder">OKR REGIONALES</h2>
-                    <p class="lead fw-normal text-muted mb-5"> PERIODO 2024</p>
+                    <h2 class="fw-bolder">HITOS DEL SERVICIO</h2>
+                    <p class="lead fw-normal text-muted mb-5">Algunos de nuestros logros</p>
                 </div>
             </div>
         </div>
+        
         <div class="row gx-5">
-            <div class="col-lg-4 mb-5">
+            <div class="col-lg-12 mb-5">
                 <div class="card h-100 shadow border-0">
-                    <img class="card-img-top" src="https://th.bing.com/th/id/OIP.bHCEkbY_i2coYhNpi8cqSgHaDy?rs=1&pid=ImgDetMain" alt="..." />
+                    <img class="card-img-top" src="https://th.bing.com/th/id/OIP.luU04z12hMCdEFK1OmmLxwHaE6?rs=1&pid=ImgDetMain" alt="..." />
                     <div class="card-body p-4">
-                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">Servicios Digitales</div>
-                        <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3">Presencialidad</h5></a>
-                        <p class="card-text mb-0"> Lograr un 90% de asistencia en cabeceras </p>
+                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
+                        <a class="text-decoration-none link-dark stretched-link" ><h5 class="card-title mb-3">Renovacion completa de flota</h5></a>
+                        <p class="card-text mb-0">Estamos llevando a cabo la renovacion completa de flota en la regional, tras un exitoso contrato con TOYOTA</p>
                     </div>
                     <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
                         <div class="d-flex align-items-end justify-content-between">
                             <div class="d-flex align-items-center">
-                                <img class="rounded-circle me-3" src="https://th.bing.com/th/id/R.2fe3cbc3d60bd2ce84ac221cba9ae52a?rik=b3BxCQptYdzQEg&pid=ImgRaw&r=0" alt="..." style="width: 40px; height: 40px;" />
+                                <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
                                 <div class="small">
-                                    <div class="fw-bold">Joaquin Calastretti</div>
-                                    <div class="text-muted">Agosto &middot; 5 PTS</div>
+                                    <div class="fw-bold"></div>
+                                    <div class="text-muted">14/08/2024 &middot; </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 mb-5">
+            <div class="col-lg-6 mb-5">
                 <div class="card h-100 shadow border-0">
-                    <img class="card-img-top" src="https://th.bing.com/th/id/OIP.bHCEkbY_i2coYhNpi8cqSgHaDy?rs=1&pid=ImgDetMain" alt="..." />
-                    <div class="card-body p-4">
-                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">Comunicaciones   </div>
-                        <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3">Tareas en altura</h5></a>
-                        <p class="card-text mb-0">Alinear enlace </p>
-                    </div>
-                    <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
-                        <div class="d-flex align-items-end justify-content-between">
-                            <div class="d-flex align-items-center">
-                                <img class="rounded-circle me-3" src="https://th.bing.com/th/id/R.2fe3cbc3d60bd2ce84ac221cba9ae52a?rik=b3BxCQptYdzQEg&pid=ImgRaw&r=0" alt="..." style="width: 40px; height: 40px;" />
-                                <div class="small">
-                                    <div class="fw-bold">Mathias Aybar</div>
-                                    <div class="text-muted">Agosto &middot; 15PTS</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-5">
-                <div class="card h-100 shadow border-0">
-                    <img class="card-img-top" src="https://th.bing.com/th/id/OIP.bHCEkbY_i2coYhNpi8cqSgHaDy?rs=1&pid=ImgDetMain" alt="..." />
-                    <div class="card-body p-4">
-                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">Gestion De Activos</div>
-                        <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3">Relevamientos</h5></a>
-                        <p class="card-text mb-0">Relevar deposito km3</p>
-                    </div>
-                    <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
-                        <div class="d-flex align-items-end justify-content-between">
-                            <div class="d-flex align-items-center">
-                                <img class="rounded-circle me-3" src="https://th.bing.com/th/id/R.2fe3cbc3d60bd2ce84ac221cba9ae52a?rik=b3BxCQptYdzQEg&pid=ImgRaw&r=0" alt="..." style="width: 40px; height: 40px;" />
-                                <div class="small">
-                                    <div class="fw-bold">Cesar Bayon </div>
-                                    <div class="text-muted">Agosto &middot; 10 PTS</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-5">
-                <div class="card h-100 shadow border-0">
-                    <img class="card-img-top" src="https://th.bing.com/th/id/OIP.bHCEkbY_i2coYhNpi8cqSgHaDy?rs=1&pid=ImgDetMain" alt="..." />
+                    <img class="card-img-top" src="https://th.bing.com/th/id/OIP.l72teaZO-MjrLrkjGNRJXQHaDP?w=342&h=153&c=7&r=0&o=5&pid=1.7" alt="..." />
                     <div class="card-body p-4">
                         <div class="badge bg-primary bg-gradient rounded-pill mb-2">Media</div>
-                        <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3">Another blog post title</h5></a>
-                        <p class="card-text mb-0">This text is a bit longer to illustrate the adaptive height of each card. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a class="text-decoration-none link-dark stretched-link" ><h5 class="card-title mb-3">Bases Operativas </h5></a>
+                        <p class="card-text mb-0">Alcanzamos la habilitacion de las 3 bases opeartivas en la regional</p>
                     </div>
                     <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
                         <div class="d-flex align-items-end justify-content-between">
                             <div class="d-flex align-items-center">
-                                <img class="rounded-circle me-3" src="https://th.bing.com/th/id/R.2fe3cbc3d60bd2ce84ac221cba9ae52a?rik=b3BxCQptYdzQEg&pid=ImgRaw&r=0" alt="..." style="width: 40px; height: 40px;" />
+                                <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
                                 <div class="small">
-                                    <div class="fw-bold">Josiah Barclay</div>
-                                    <div class="text-muted">March 23, 2023 &middot; 4 min read</div>
+                                    <div class="fw-bold"></div>
+                                    <div class="text-muted">14/08/2024 &middot; </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 mb-5">
+            <div class="col-lg-6 mb-2">
                 <div class="card h-100 shadow border-0">
-                    <img class="card-img-top" src="https://th.bing.com/th/id/OIP.bHCEkbY_i2coYhNpi8cqSgHaDy?rs=1&pid=ImgDetMain" alt="..." />
+                    <img class="card-img-top" src="https://th.bing.com/th/id/R.912a838c6fceb65e18a0ebe14d017ef4?rik=7PKvhNb4RJg%2fZA&pid=ImgRaw&r=0" alt="..." />
                     <div class="card-body p-4">
-                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">Media</div>
-                        <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3">Another blog post title</h5></a>
-                        <p class="card-text mb-0">This text is a bit longer to illustrate the adaptive height of each card. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
+                        <a class="text-decoration-none link-dark stretched-link" ><h5 class="card-title mb-3">Rompiendo Records!</h5></a>
+                        <p class="card-text mb-0">La ultima medicion de OKR represento la marca record en la regional!</p>
                     </div>
                     <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
                         <div class="d-flex align-items-end justify-content-between">
                             <div class="d-flex align-items-center">
-                                <img class="rounded-circle me-3" src="https://th.bing.com/th/id/R.2fe3cbc3d60bd2ce84ac221cba9ae52a?rik=b3BxCQptYdzQEg&pid=ImgRaw&r=0" alt="..." style="width: 40px; height: 40px;" />
+                                <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
                                 <div class="small">
-                                    <div class="fw-bold">Josiah Barclay</div>
-                                    <div class="text-muted">March 23, 2023 &middot; 4 min read</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-5">
-                <div class="card h-100 shadow border-0">
-                    <img class="card-img-top" src="https://th.bing.com/th/id/OIP.bHCEkbY_i2coYhNpi8cqSgHaDy?rs=1&pid=ImgDetMain" alt="..." />
-                    <div class="card-body p-4">
-                        <div class="badge bg-primary bg-gradient rounded-pill mb-2">Media</div>
-                        <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3">Another blog post title</h5></a>
-                        <p class="card-text mb-0">This text is a bit longer to illustrate the adaptive height of each card. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
-                        <div class="d-flex align-items-end justify-content-between">
-                            <div class="d-flex align-items-center">
-                                <img class="rounded-circle me-3" src="https://th.bing.com/th/id/R.2fe3cbc3d60bd2ce84ac221cba9ae52a?rik=b3BxCQptYdzQEg&pid=ImgRaw&r=0" alt="..." style="width: 40px; height: 40px;" />
-                                <div class="small">
-                                    <div class="fw-bold">Josiah Barclay</div>
-                                    <div class="text-muted">March 23, 2023 &middot; 4 min read</div>
+                                    <div class="fw-bold"></div>
+                                    <div class="text-muted">14/08/2024 &middot; </div>
                                 </div>
                             </div>
                         </div>
@@ -164,10 +99,28 @@
                 </div>
             </div>
             
-
-            
-
-
-
+        </div>
+        <!-- Call to action-->
+       
+    </div>
+</section>
+</main>
 {%endblock%}
 
+
+{%block footer%}
+<footer class="bg-dark py-2 mt-auto" style="position: fixed; bottom: 0; width: 100%; margin-left: 0 !important; margin-bottom: 0px;">
+    <div class="container px-5">
+        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+            <div class="col-auto"><div class="small m-0 text-white">Regional Sur &copy; Administracion de personal</div></div>
+            <div class="col-auto">
+                <a class="link-light small" >Joaquin Calastretti</a>
+                <span class="text-white mx-1">&middot;</span>
+                <a class="link-light small" >2024</a>
+                <span class="text-white mx-1">&middot;</span>
+                <a class="link-light small" >Las heras, Santa Cruz</a>
+            </div>
+        </div>
+    </div>
+</footer>
+{%endblock%}

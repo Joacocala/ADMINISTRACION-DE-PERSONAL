@@ -73,6 +73,10 @@ TEMPLATES = [
     },
 ]
 
+
+
+LOGOUT_REDIRECT_URL = 'inicio'
+
 WSGI_APPLICATION = 'ADP.wsgi.application'
 
 
@@ -104,6 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+LOGIN_URL = "/users/login"
 
 
 # Internationalization
@@ -116,7 +121,8 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
+MEDIA_URL ="/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/

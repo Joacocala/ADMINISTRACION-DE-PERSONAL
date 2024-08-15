@@ -1,14 +1,88 @@
 {% extends "Base.html" %}
 {%load static%}
 
+
+{%block header %}
+
+{%endblock%}
 {%block cambia%}
 
-<h1> login </h1>
+            <!-- Header-->
+            <header class="py-5">
+              <div class="container px-5">
+                  <div class="row justify-content-center">
+                      <div class="col-lg-8 col-xxl-6">
+                          <div class="text-center my-5">
+                              <!-- Agregar la imagen aquí -->
+                              <img class="rounded-circle" src="https://media.licdn.com/dms/image/D4D0BAQFOPyOhO4wTTg/company-logo_200_200/0/1719784126380/stefanini_brasil_logo?e=2147483647&v=beta&t=8dBxvyqk1KGc0mHw0u6wkJG29H7oAYWbWymUDDRY2iI" alt="Perfil de Joaquín Calastretti" style="width: 400px; height: 400px;">
+                              
+                              <!-- Hacer el nombre más grande -->
+                              <h1 class="display-3 fw-bolder mb-5">Inicia Sesion</h1>
+                              <p class="lead fw-normal text-muted mb-4">Algunas vistas estan restringidas y solo puedes acceder si cuentas con los permisos necesarios.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </header>
+
 
 
 <form action="" method="POST">
-{% csrf_token %}
-  {{form.as_table}}
-<input type="submit" value="aceptar">
+  <div class="login-container">
+    <h2 class="text-center mb-4">Iniciar Sesión</h2>
+    <p class="navbar-brand">{{msg_login}} </p>
+    <form action="" method="POST">
+        <div class="mb-3">
+            {% csrf_token %}
+            {{ form.username.label_tag }}
+            {{ form.username }}
+            {{ form.username.errors }}
+        </div>
+        <div class="mb-3">
+            {{ form.password.label_tag }}
+            {{ form.password }}
+            {{ form.password.errors }}
+        </div>
+        <button type="submit" class="btn-submit w-100">Aceptar</button>
+    </form>
+        </div>   
+  
 </form>
+<!-- SCRIPT DE ALERTA PARA INICIOS DE SESION FALLIDOS -->
+<script>
+    // Obtén el mensaje de {{msg_login}}
+    var msgLoginElement = document.querySelector('.navbar-brand');
+    var msgLoginText = msgLoginElement.textContent || msgLoginElement.innerText;
+
+    // Muestra la alerta con el mensaje obtenido
+    alert(msgLoginText);
+</script>
+<style>
+  .login-container {
+    max-width: 500px; /* Aumentado para ocupar más espacio */
+    padding: 20px;
+    position: fixed;
+    top: 75%; /* Posiciona el borde superior del contenedor en el centro vertical */
+    left: 50%; /* Posiciona el borde izquierdo del contenedor en el centro horizontal */
+    transform: translate(-50%, -50%); /* Mueve el contenedor hacia atrás para centrarlo exactamente */
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Agrega bordes redondeados para un aspecto más moderno */
+}
+.form-group label {
+      font-weight: bold;
+  }
+.btn-submit {
+      background-color: #007bff;
+      color: white;
+      border-radius: 0.25rem;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%; /* Hacer que el botón ocupe todo el ancho disponible */
+  }
+.btn-submit:hover {
+      background-color: #0056b3;
+  }
+</style>
 {%endblock%}

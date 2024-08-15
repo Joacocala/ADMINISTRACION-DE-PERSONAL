@@ -438,7 +438,52 @@ legend + * {
 ::-webkit-inner-spin-button {
   height: auto;
 }
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
 
+/* Estilo para el título principal */
+.title-main {
+  text-align: center;
+  padding: 50px 0;
+  font-size: 48px;
+  color: #007bff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: 1px;
+}
+
+/* Estilo para subtítulos o detalles adicionales */
+.title-sub {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 24px;
+  color: #666;
+  font-weight: bold;
+}
+
+/* Estilo para el contenedor del logotipo y el título */
+.logo-title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Estilo para el logotipo */
+.logo {
+  width: 150px; /* Ajusta según el tamaño de tu logotipo */
+  height: auto;
+}
+
+/* Estilo para el texto del logotipo */
+.logo-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
 [type=search] {
   outline-offset: -2px;
   -webkit-appearance: textfield;
@@ -5366,6 +5411,7 @@ textarea.form-control-lg {
 }
 
 .modal-footer {
+  width: 100% !important;
   display: flex;
   position: fixed;
   flex-shrink: 0;
@@ -7788,6 +7834,8 @@ textarea.form-control-lg {
 .py-5 {
   padding-top: 3rem !important;
   padding-bottom: 3rem !important;
+  color: #007bff !important;
+
 }
 
 .pt-0 {
@@ -10896,4 +10944,80 @@ html {
 
 .botonSubmit:hover {
   background-color: #45a049;
+}
+
+
+
+
+
+
+
+* Estilo para el encabezado */
+.bg-dark {
+    background-color: #34ABFF; /* Color de fondo oscuro */
+    color: #34ABFF; /* Texto blanco */
+}
+
+/* Ajustes generales al contenedor */
+.container {
+    max-width: 1200px; /* Ancho máximo del contenedor */
+}
+
+/* Espaciado vertical y horizontal */
+.px-5 {
+    padding-right: 3rem;
+    padding-left: 3rem;
+}
+
+/* Alineación y justificación de elementos */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* Ajustes para dispositivos extra grandes */
+.col-xxl-6 {
+    flex: 0 0 50%; /* No crecerá ni se encogerá, ocupará siempre el 50% del ancho disponible */
+}
+
+/* Estilo para el título */
+.display-5 {
+    font-size: 3rem; /* Tamaño de fuente grande */
+    font-weight: bold; /* Fuerte */
+    margin-bottom: 1rem; /* Margen inferior */
+}
+
+/* Estilo para el párrafo */
+.lead {
+    font-size: 1.25rem; /* Tamaño de fuente para subtítulos */
+    font-weight: normal; /* Normal */
+    margin-bottom: 1rem; /* Margen inferior */
+}
+
+/* Estilo para el div que contiene el grid */
+.d-grid {
+    display: grid;
+    gap: 1rem; /* Espacio entre elementos del grid */
+}
+
+/* Estilo para la imagen */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilo para hacer que la imagen redondee sus bordes */
+.rounded-3 {
+    border-radius: .375rem;
+}
+
+/* Ocultar la imagen en pantallas pequeñas */
+.d-none {
+    display: none;
+}
+
+/* Mostrar la imagen en pantallas extra grandes */
+.d-xl-block {
+    display: block;
 }

@@ -1,0 +1,87 @@
+{% extends "Base.html" %}
+{%load static%}
+{%block header%}
+{%endblock%}
+
+
+{%block cambia%}
+    <!-- Header-->
+    <header class="py-5">
+        <div class="container px-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-xxl-6">
+                    <div class="text-center my-5">
+                        <!-- Agregar la imagen aquí -->
+                        <img class="rounded-circle" src="https://media.licdn.com/dms/image/D4D0BAQFOPyOhO4wTTg/company-logo_200_200/0/1719784126380/stefanini_brasil_logo?e=2147483647&v=beta&t=8dBxvyqk1KGc0mHw0u6wkJG29H7oAYWbWymUDDRY2iI" alt="Perfil de Joaquín Calastretti" style="width: 400px; height: 400px;">
+                        
+                        <!-- Hacer el nombre más grande -->
+                        <h1 class="display-3 fw-bolder mb-5">Inicia Sesion</h1>
+                        <p class="lead fw-normal text-muted mb-4">Agrega algunos datos mas a tu perfil de usuario.</p>
+                        <p class="lead fw-normal text-muted mb-4">
+                            {% if messages %}
+                            <ul class="messages">
+                                {% for message in messages %}
+                                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<form action="" method="POST" enctype="multipart/form-data">
+    <div class="login-container">
+      <h2 class="text-center mb-8">Iniciar Sesión</h2>
+      <form action="" method="POST">
+          <div class="mb-3">
+              {% csrf_token %}
+             {{miFormulario}}
+             
+          </div>
+          <div class="mb-3">
+             
+          </div>
+          <button type="submit" class="btn-submit w-100">Aceptar</button>
+          <a class="navbar-brand" href="{% url 'CambiarPassword' %}"> Cambiar contraseña</a>
+          
+      </form>
+          </div>   
+    
+  </form>
+
+
+
+  
+  <style>
+  
+    .login-container {
+      max-width: 500px; /* Aumentado para ocupar más espacio */
+      padding: 20px;
+      position: fixed;
+      top: 75%; /* Posiciona el borde superior del contenedor en el centro vertical */
+      left: 50%; /* Posiciona el borde izquierdo del contenedor en el centro horizontal */
+      transform: translate(-50%, -50%); /* Mueve el contenedor hacia atrás para centrarlo exactamente */
+      background-color: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px; /* Agrega bordes redondeados para un aspecto más moderno */
+  }
+  
+    .form-group label {
+        font-weight: bold;
+    }
+    .btn-submit {
+        background-color: #007bff;
+        color: white;
+        border-radius: 0.25rem;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 100%; /* Hacer que el botón ocupe todo el ancho disponible */
+    }
+    .btn-submit:hover {
+        background-color: #0056b3;
+    }
+  </style>
+{%endblock%}

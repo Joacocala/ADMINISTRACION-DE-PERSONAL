@@ -41,7 +41,7 @@
         <th scope="col">Torre de Servicio</th>
         <th scope="col">Editar perfil </th>
         <th scope="col">Ver detalles </th>
-        <th scope="col">Eliminar </th>
+        <th scope="col" >Eliminar </th>
       </tr>
     </thead>
     <tbody>
@@ -53,8 +53,8 @@
         <td>{{ empleado.num_telefono }}</td>
         <td>{{ empleado.torre_servicio }}</td>
         <td><a href="{% url 'update_empleados' empleado.pk %}" class="btn btn-primary">Editar perfil</a></td>
-        <td><a href="{% url 'detalle_empleados' empleado.pk %}" class="btn btn-primary">Ver detalles</a></td>
-        <td><a href="{% url 'borrar_empleados' empleado.pk %}" class="btn btn-primary">Eliminar</a></td>
+        <td><a href="{% url 'detalle_empleados' empleado.pk %}" class="btn btn-warning">Ver detalles</a></td>
+        <td><a href="{% url 'borrar_empleados' empleado.pk %}" class="btn btn-danger">Eliminar</a></td>
         
       </tr>
       {% endfor %}
